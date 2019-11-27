@@ -15,15 +15,16 @@
 
 @implementation ViewController
 
-NSArray *tableData;
-NSArray *thumbnails;
+NSMutableArray *tableData;
+NSMutableArray *thumbnails;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    tableData = [NSArray arrayWithObjects:@"Linkin Park",@"The Chainsmokers",@"Queen",@"Imagine Dragon", nil];
-    thumbnails = [NSArray arrayWithObjects:@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg", nil];
+    tableData = [NSMutableArray arrayWithObjects:@"Linkin Park",@"The Chainsmokers",@"Queen",@"Imagine Dragon", nil];
+    thumbnails = [NSMutableArray arrayWithObjects:@"1.jpg",@"2.jpg",@"3.jpg",@"4.jpg", nil];
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -61,6 +62,12 @@ NSArray *thumbnails;
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableData removeObjectAtIndex:indexPath.row];
+    [tableView reloadData];
 }
 
 @end
