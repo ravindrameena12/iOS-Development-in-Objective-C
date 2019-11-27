@@ -49,4 +49,18 @@ NSArray *thumbnails;
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *str = tableData[indexPath.row];
+    UIAlertView *messageAlert = [[UIAlertView alloc]
+                                 initWithTitle:@"Row Selected" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    // Display Alert Message
+    [messageAlert show];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+}
+
 @end
