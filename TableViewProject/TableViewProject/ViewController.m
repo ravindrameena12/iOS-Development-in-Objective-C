@@ -8,15 +8,17 @@
 
 #import "ViewController.h"
 #import "SimpleTableCell.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 @end
 
 @implementation ViewController
 
 NSMutableArray *tableData;
 NSMutableArray *thumbnails;
+@synthesize tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,24 +52,33 @@ NSMutableArray *thumbnails;
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString *str = tableData[indexPath.row];
-    UIAlertView *messageAlert = [[UIAlertView alloc]
-                                 initWithTitle:@"Row Selected" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-    
-    // Display Alert Message
-    [messageAlert show];
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
-}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSString *str = tableData[indexPath.row];
+////    UIAlertView *messageAlert = [[UIAlertView alloc]
+////                                 initWithTitle:@"Row Selected" message:str delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+////
+////    // Display Alert Message
+////    [messageAlert show];
+//
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//
+//}
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableData removeObjectAtIndex:indexPath.row];
     [tableView reloadData];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"navigateToDetailView"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        SecondViewController *destViewController = segue.destinationViewController;
+        destViewController.recipeName = [tableData objectAtIndex:indexPath.row];
+        destViewController.musicImageString = [thumbnails objectAtIndex:indexPath.row];
+    }
 }
 
 @end

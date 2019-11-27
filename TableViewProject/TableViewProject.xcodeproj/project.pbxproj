@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7141535D238E570100B3B8C4 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141535C238E570100B3B8C4 /* SimpleTableCell.m */; };
+		71415360238E8CAE00B3B8C4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141535F238E8CAE00B3B8C4 /* SecondViewController.m */; };
 		717220E5238D5CC8009A9EFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 717220E4238D5CC8009A9EFD /* AppDelegate.m */; };
 		717220E8238D5CC8009A9EFD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717220E7238D5CC8009A9EFD /* ViewController.m */; };
 		717220EB238D5CC8009A9EFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717220E9238D5CC8009A9EFD /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		7141535B238E570100B3B8C4 /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		7141535C238E570100B3B8C4 /* SimpleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		7141535E238E8CAE00B3B8C4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7141535F238E8CAE00B3B8C4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		717220E0238D5CC8009A9EFD /* TableViewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		717220E3238D5CC8009A9EFD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		717220E4238D5CC8009A9EFD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 				717220F2238D5CCF009A9EFD /* main.m */,
 				7141535B238E570100B3B8C4 /* SimpleTableCell.h */,
 				7141535C238E570100B3B8C4 /* SimpleTableCell.m */,
+				7141535E238E8CAE00B3B8C4 /* SecondViewController.h */,
+				7141535F238E8CAE00B3B8C4 /* SecondViewController.m */,
 			);
 			path = TableViewProject;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71415360238E8CAE00B3B8C4 /* SecondViewController.m in Sources */,
 				717220E8238D5CC8009A9EFD /* ViewController.m in Sources */,
 				717220F3238D5CCF009A9EFD /* main.m in Sources */,
 				7141535D238E570100B3B8C4 /* SimpleTableCell.m in Sources */,

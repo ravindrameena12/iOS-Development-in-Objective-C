@@ -54,6 +54,7 @@
                                             <outlet property="nameLabel" destination="5zo-Fx-U3o" id="HVn-Ho-9n2"/>
                                             <outlet property="prepTimeLabel" destination="SO5-hj-taw" id="wEX-HX-zaa"/>
                                             <outlet property="thumbnailImageView" destination="RGm-xQ-J10" id="9MF-eE-17H"/>
+                                            <segue destination="4PW-9U-JpD" kind="show" identifier="navigateToDetailView" id="Tgo-8E-a7w"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -67,25 +68,45 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Music Band" id="E5T-jd-zdX"/>
+                    <connections>
+                        <outlet property="tableView" destination="twI-Yi-tzg" id="OMY-l7-WcL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="604" y="114.69265367316342"/>
+            <point key="canvasLocation" x="618" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="zjL-HT-tJE">
             <objects>
-                <viewController id="4PW-9U-JpD" sceneMemberID="viewController">
+                <viewController id="4PW-9U-JpD" customClass="SecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jLl-kP-aMX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyc-w2-Cct">
+                                <rect key="frame" x="166" y="251" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wlD-gg-lMS">
+                                <rect key="frame" x="16" y="20" width="343" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Mxd-Ps-Eez"/>
                     </view>
+                    <connections>
+                        <outlet property="musicImage" destination="wlD-gg-lMS" id="GIf-DK-UnG"/>
+                        <outlet property="recipeLabel" destination="Pyc-w2-Cct" id="AmR-DQ-nIZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ss3-d3-Agp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="119"/>
+            <point key="canvasLocation" x="1325.5999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
