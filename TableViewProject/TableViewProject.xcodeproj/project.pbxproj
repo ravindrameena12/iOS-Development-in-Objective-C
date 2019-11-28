@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7141535D238E570100B3B8C4 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141535C238E570100B3B8C4 /* SimpleTableCell.m */; };
-		71415360238E8CAE00B3B8C4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7141535F238E8CAE00B3B8C4 /* SecondViewController.m */; };
 		71415385238EAA0B00B3B8C4 /* SecondTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71415384238EAA0B00B3B8C4 /* SecondTabView.m */; };
 		71415387238EAD0100B3B8C4 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 71415386238EAD0100B3B8C4 /* about.html */; };
 		717220E5238D5CC8009A9EFD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 717220E4238D5CC8009A9EFD /* AppDelegate.m */; };
@@ -17,13 +16,13 @@
 		717220ED238D5CCF009A9EFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 717220EC238D5CCF009A9EFD /* Assets.xcassets */; };
 		717220F0238D5CCF009A9EFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 717220EE238D5CCF009A9EFD /* LaunchScreen.storyboard */; };
 		717220F3238D5CCF009A9EFD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 717220F2238D5CCF009A9EFD /* main.m */; };
+		71CEE840238FA2D400667B47 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CEE83F238FA2D400667B47 /* Recipe.m */; };
+		71CEE843238FA67200667B47 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CEE842238FA67200667B47 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7141535B238E570100B3B8C4 /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		7141535C238E570100B3B8C4 /* SimpleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
-		7141535E238E8CAE00B3B8C4 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		7141535F238E8CAE00B3B8C4 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		71415383238EAA0B00B3B8C4 /* SecondTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTabView.h; sourceTree = "<group>"; };
 		71415384238EAA0B00B3B8C4 /* SecondTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTabView.m; sourceTree = "<group>"; };
 		71415386238EAD0100B3B8C4 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = about.html; path = ../../about.html; sourceTree = "<group>"; };
@@ -37,6 +36,10 @@
 		717220EF238D5CCF009A9EFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		717220F1238D5CCF009A9EFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		717220F2238D5CCF009A9EFD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		71CEE83E238FA2D400667B47 /* Recipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
+		71CEE83F238FA2D400667B47 /* Recipe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		71CEE841238FA67200667B47 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		71CEE842238FA67200667B47 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,12 @@
 				717220F2238D5CCF009A9EFD /* main.m */,
 				7141535B238E570100B3B8C4 /* SimpleTableCell.h */,
 				7141535C238E570100B3B8C4 /* SimpleTableCell.m */,
-				7141535E238E8CAE00B3B8C4 /* SecondViewController.h */,
-				7141535F238E8CAE00B3B8C4 /* SecondViewController.m */,
 				71415383238EAA0B00B3B8C4 /* SecondTabView.h */,
 				71415384238EAA0B00B3B8C4 /* SecondTabView.m */,
+				71CEE83E238FA2D400667B47 /* Recipe.h */,
+				71CEE83F238FA2D400667B47 /* Recipe.m */,
+				71CEE841238FA67200667B47 /* SecondViewController.h */,
+				71CEE842238FA67200667B47 /* SecondViewController.m */,
 			);
 			path = TableViewProject;
 			sourceTree = "<group>";
@@ -160,9 +165,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71415360238E8CAE00B3B8C4 /* SecondViewController.m in Sources */,
+				71CEE840238FA2D400667B47 /* Recipe.m in Sources */,
 				717220E8238D5CC8009A9EFD /* ViewController.m in Sources */,
 				71415385238EAA0B00B3B8C4 /* SecondTabView.m in Sources */,
+				71CEE843238FA67200667B47 /* SecondViewController.m in Sources */,
 				717220F3238D5CCF009A9EFD /* main.m in Sources */,
 				7141535D238E570100B3B8C4 /* SimpleTableCell.m in Sources */,
 				717220E5238D5CC8009A9EFD /* AppDelegate.m in Sources */,

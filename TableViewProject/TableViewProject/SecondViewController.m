@@ -18,13 +18,17 @@
 @synthesize musicImage;
 @synthesize recipeName;
 @synthesize musicImageString;
+@synthesize recipeIngredient;
+
+@synthesize recipe;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    recipeLabel.text = recipeName;
-    musicImage.image = [UIImage imageNamed:musicImageString];
+    recipeLabel.text = recipe.name;
+    recipeIngredient.text = recipe.ingredients;
+//    musicImage.image = [UIImage imageNamed:musicImageString];
 }
 
 /*

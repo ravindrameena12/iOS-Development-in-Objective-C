@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Recipe.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,8 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) IBOutlet UILabel *recipeLabel;
 @property (nonatomic, strong) IBOutlet UIImageView *musicImage;
+@property (nonatomic, strong) IBOutlet UILabel *recipeIngredient;
 @property (nonatomic, strong) NSString *recipeName;
 @property (nonatomic, strong) NSString *musicImageString;
+
+@property (nonatomic, strong) Recipe* recipe;
 
 @end
 
