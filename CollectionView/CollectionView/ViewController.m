@@ -17,15 +17,24 @@
 
 @synthesize collectionview;
 @synthesize tracks;
+@synthesize secondTrack;
+
+NSArray* finalTrack;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.tracks = [NSArray arrayWithObjects:@"Linkin park", @"Imagine", @"Queen", @"Yahoo", nil];
+    self.secondTrack = [NSArray arrayWithObjects:@"Sachin", @"Dhoni", @"Rahul", @"Sehwag", nil];
+    
+    finalTrack = [NSArray arrayWithObjects:tracks, secondTrack, nil];
+    
+    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionview.collectionViewLayout;
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.tracks.count;
+    return [[finalTrack objectAtIndex:section] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -33,11 +42,16 @@
     
     TrackCellCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
     
-    NSString *text = [self.tracks objectAtIndex:indexPath.row];
+    NSString *text = [finalTrack[indexPath.section] objectAtIndex:indexPath.row];
     cell.name.text = text;
     
     
     return cell;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return [finalTrack count];
 }
 
 

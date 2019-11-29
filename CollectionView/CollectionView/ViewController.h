@@ -10,8 +10,8 @@
 
 @interface ViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionview;
-@property (strong,nonatomic) NSArray* tracks;
-
+@property (strong, nonatomic) NSArray* tracks;
+@property (strong, nonatomic) NSArray* secondTrack;
 
 @end
 
