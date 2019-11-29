@@ -18,14 +18,19 @@
 @synthesize collectionview;
 @synthesize tracks;
 @synthesize secondTrack;
+@synthesize shareButton;
 
 NSArray* finalTrack;
+BOOL shareEnabled;
+NSMutableArray *selectedRecipes;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.tracks = [NSArray arrayWithObjects:@"Linkin park", @"Imagine", @"Queen", @"Yahoo", nil];
     self.secondTrack = [NSArray arrayWithObjects:@"Sachin", @"Dhoni", @"Rahul", @"Sehwag", nil];
+    
+    selectedRecipes = [NSMutableArray array];
     
     finalTrack = [NSArray arrayWithObjects:tracks, secondTrack, nil];
     
@@ -45,6 +50,9 @@ NSArray* finalTrack;
     NSString *text = [finalTrack[indexPath.section] objectAtIndex:indexPath.row];
     cell.name.text = text;
     
+    if(shareEnabled){
+        cell.backgroundColor = UIColor.orangeColor;
+    }
     
     return cell;
 }
@@ -54,5 +62,22 @@ NSArray* finalTrack;
     return [finalTrack count];
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (shareEnabled) {
+        // Determine the selected items by using the indexPath
+        NSString *selectedRecipe = [finalTrack[indexPath.section] objectAtIndex:indexPath.row];
+        // Add the selected item into the array
+        [selectedRecipes addObject:selectedRecipe];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (shareEnabled) {
+        NSString *deSelectedRecipe = [finalTrack[indexPath.section] objectAtIndex:indexPath.row];
+        [selectedRecipes removeObject:deSelectedRecipe];
+    }
+}
 
 @end
