@@ -26,6 +26,7 @@
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:@"Delete it"
                                                     otherButtonTitles:@"Copy", @"Move", @"Duplicate", nil];
+    actionSheet.tag = 100;
     
      [actionSheet showInView:self.view];
 }
@@ -37,6 +38,8 @@
                                                destructiveButtonTitle:@"Yes, delete it"
                                                     otherButtonTitles:nil];
     
+    actionSheet.tag = 200;
+    
     [actionSheet showInView:self.view];
 }
 
@@ -47,7 +50,33 @@
                                                destructiveButtonTitle:nil
                                                     otherButtonTitles:@"Red", @"Green", @"Blue", @"Orange", @"Purple", nil];
     
+    actionSheet.tag = 300;
     [actionSheet showInView:self.view];
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 100) {
+        NSLog(@"The Normal action sheet.");
+    }
+    else if (actionSheet.tag == 200){
+        NSLog(@"The Delete confirmation action sheet.");
+    }
+    else{
+        NSLog(@"The Color selection action sheet.");
+    }
+    
+    NSLog(@"Index = %d - Title = %@", buttonIndex, [actionSheet buttonTitleAtIndex:buttonIndex]);
+}
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 300) {
+        NSLog(@"From didDismissWithButtonIndex - Selected Color: %@", [actionSheet buttonTitleAtIndex:buttonIndex]);
+    }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if (actionSheet.tag == 300) {
+        NSLog(@"From willDismissWithButtonIndex - Selected Color: %@", [actionSheet buttonTitleAtIndex:buttonIndex]);
+    }
 }
 
 @end
