@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AOModalStatusView" customModule="CreatingFramework" customModuleProvider="target">
+            <connections>
+                <outlet property="headlineLabel" destination="cKB-VM-hgI" id="G8h-3K-rxs"/>
+                <outlet property="statusImage" destination="nXc-q6-YfF" id="uOl-Ts-Mjo"/>
+                <outlet property="subheadLabel" destination="0EK-rk-UQd" id="lcv-3n-SQh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="0Wl-a6-W5y">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vc6-V2-gJ6">
+                <rect key="frame" x="0.0" y="0.0" width="230" height="230"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXc-q6-YfF">
+                        <rect key="frame" x="50" y="10" width="130" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="Rsl-dy-mLE"/>
+                            <constraint firstAttribute="width" constant="130" id="Tdy-FZ-kYc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKB-VM-hgI">
+                        <rect key="frame" x="58" y="160" width="114" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EK-rk-UQd">
+                        <rect key="frame" x="94" y="186" width="42" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0EK-rk-UQd" firstAttribute="top" secondItem="cKB-VM-hgI" secondAttribute="bottom" constant="5" id="Eox-qh-8Z3"/>
+                    <constraint firstItem="cKB-VM-hgI" firstAttribute="centerX" secondItem="Vc6-V2-gJ6" secondAttribute="centerX" id="Lr7-2B-vb2"/>
+                    <constraint firstItem="0EK-rk-UQd" firstAttribute="centerX" secondItem="Vc6-V2-gJ6" secondAttribute="centerX" id="OBi-XR-dJP"/>
+                    <constraint firstItem="nXc-q6-YfF" firstAttribute="top" secondItem="Vc6-V2-gJ6" secondAttribute="top" constant="10" id="UkD-ey-iod"/>
+                    <constraint firstItem="nXc-q6-YfF" firstAttribute="centerX" secondItem="Vc6-V2-gJ6" secondAttribute="centerX" id="afI-6d-h0f"/>
+                    <constraint firstItem="cKB-VM-hgI" firstAttribute="top" secondItem="nXc-q6-YfF" secondAttribute="bottom" constant="20" id="oa8-Fr-ble"/>
+                </constraints>
+            </view>
+            <blurEffect style="light"/>
+            <point key="canvasLocation" x="137.59999999999999" y="86.35682158920541"/>
+        </visualEffectView>
+    </objects>
+</document>
