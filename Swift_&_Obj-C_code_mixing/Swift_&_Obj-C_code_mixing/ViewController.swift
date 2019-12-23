@@ -12,6 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let book = Book(wihName: "Ravindra", andGrade: "A5")
+        print(book.fName)
+        print(book.grade)
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
