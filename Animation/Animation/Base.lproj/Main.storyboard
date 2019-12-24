@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-b9-C8B">
+                                <rect key="frame" x="67.5" y="279.5" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="TjO-xa-grU"/>
+                                    <constraint firstAttribute="height" constant="128" id="aCb-bC-wgr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6a-NS-ce5">
+                                <rect key="frame" x="96.5" y="447" width="182" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLc-qi-mHJ">
+                                        <rect key="frame" x="20" y="20" width="142" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <state key="normal" title="Animate"/>
+                                        <connections>
+                                            <action selector="bottomButtonpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4rf-2H-iMo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="qLc-qi-mHJ" secondAttribute="bottom" constant="20" symbolic="YES" id="0ok-t6-zBw"/>
+                                    <constraint firstItem="qLc-qi-mHJ" firstAttribute="leading" secondItem="Y6a-NS-ce5" secondAttribute="leading" constant="20" symbolic="YES" id="K2d-XQ-bME"/>
+                                    <constraint firstItem="qLc-qi-mHJ" firstAttribute="top" secondItem="Y6a-NS-ce5" secondAttribute="top" constant="20" symbolic="YES" id="rLo-7H-irp"/>
+                                    <constraint firstAttribute="trailing" secondItem="qLc-qi-mHJ" secondAttribute="trailing" constant="20" symbolic="YES" id="xJG-ha-vJ5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y6a-NS-ce5" firstAttribute="top" secondItem="5ZN-b9-C8B" secondAttribute="bottom" constant="39.5" id="3Q2-tA-tps"/>
+                            <constraint firstItem="5ZN-b9-C8B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="60M-tq-hWq"/>
+                            <constraint firstItem="Y6a-NS-ce5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9kR-mB-bUj"/>
+                            <constraint firstItem="5ZN-b9-C8B" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="vLd-KX-pyp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomView" destination="Y6a-NS-ce5" id="99c-2P-Dpi"/>
+                        <outlet property="topView" destination="5ZN-b9-C8B" id="a2d-As-MuF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
