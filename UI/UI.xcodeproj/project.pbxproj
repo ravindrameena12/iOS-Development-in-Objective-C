@@ -14,6 +14,7 @@
 		710772B223C3468D00263D8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710772B023C3468D00263D8E /* LaunchScreen.storyboard */; };
 		710772BA23C3547700263D8E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710772B923C3547700263D8E /* TableViewController.swift */; };
 		710772BC23C361A400263D8E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710772BB23C361A400263D8E /* TableViewCell.swift */; };
+		710BC98723C717BC0012DAE1 /* CarClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710BC98623C717BC0012DAE1 /* CarClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		710772B323C3468D00263D8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		710772B923C3547700263D8E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		710772BB23C361A400263D8E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		710BC98623C717BC0012DAE1 /* CarClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				710772B323C3468D00263D8E /* Info.plist */,
 				710772B923C3547700263D8E /* TableViewController.swift */,
 				710772BB23C361A400263D8E /* TableViewCell.swift */,
+				710BC98623C717BC0012DAE1 /* CarClass.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710BC98723C717BC0012DAE1 /* CarClass.swift in Sources */,
 				710772AA23C3467F00263D8E /* ViewController.swift in Sources */,
 				710772BC23C361A400263D8E /* TableViewCell.swift in Sources */,
 				710772BA23C3547700263D8E /* TableViewController.swift in Sources */,

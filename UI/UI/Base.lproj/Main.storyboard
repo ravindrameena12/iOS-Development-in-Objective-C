@@ -39,7 +39,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BTo-tu-ZVz">
                                                             <rect key="frame" x="0.0" y="0.0" width="124" height="130"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CellImage" translatesAutoresizingMaskIntoConstraints="NO" id="iQL-vU-4dy">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="iQL-vU-4dy">
                                                                     <rect key="frame" x="0.0" y="0.0" width="124" height="130"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="130" id="PPm-Z7-gO6"/>
@@ -193,6 +193,12 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="auctionButton" destination="Yau-De-QyA" id="bi2-cN-pkY"/>
+                                    <outlet property="carData" destination="fg8-Dk-1QE" id="y5f-Gl-W2J"/>
+                                    <outlet property="carFax" destination="zAD-Fg-V7U" id="aSA-xK-Ouh"/>
+                                    <outlet property="carNumber" destination="AR1-jc-Jmh" id="3YN-Dm-FYk"/>
+                                    <outlet property="carTitle" destination="K32-f8-sox" id="J8s-QW-SaM"/>
+                                    <outlet property="carTotal" destination="20H-Dr-E1A" id="jLB-Hk-J6G"/>
+                                    <outlet property="carimage" destination="iQL-vU-4dy" id="KLQ-mt-VLs"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,7 +212,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZnS-Bx-n0o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1015.2" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1020" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cgn-xl-XEy">
@@ -228,6 +234,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CellImage" width="500" height="375"/>
+        <image name="1" width="110" height="73"/>
     </resources>
 </document>

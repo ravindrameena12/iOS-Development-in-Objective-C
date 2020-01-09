@@ -10,10 +10,21 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-  
+    var carData = [CarClass]()
+    
+    var carNames = ["Honda", "Maruti", "Hyundai", "Bugati", "Renaults"]
+    var phoneNumbers = ["2893823410", "0987654321", "1234567890", "1234509876", "0987612345"]
+    var carDates = ["Monday - 1:00PM CST", "Tuesday - 2:00PM CST", "Wednesday - 3:00PM CST", "Thursday - 4:00PM CST", "Friday - 5:00PM CST"]
+    var totalVehicles = ["284", "285", "286", "287", "288"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        for i in 0...4 {
+            let car = CarClass(image: String(i), carName: carNames[i], phoneNumber: phoneNumbers[i], carDate: carDates[i], totalVehicle: totalVehicles[i])
+            carData.append(car)
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -23,18 +34,21 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return carData.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customcell", for: indexPath) as! TableViewCell
-
-
+        
+        cell.carimage.image = UIImage(named: String(indexPath.row))
+        cell.carTitle.text = carData[indexPath.row].carName
+        cell.carNumber.attributedText = NSAttributedString(string: carData[indexPath.row].phoneNumber, attributes:
+            [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        cell.carFax.text = carData[indexPath.row].phoneNumber
+        cell.carData.text = carData[indexPath.row].carDate
+        cell.carTotal.text = carData[indexPath.row].totalVehicle + " Total Vehicles"
 
         return cell
     }
