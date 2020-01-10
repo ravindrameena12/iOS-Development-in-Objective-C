@@ -56,7 +56,7 @@
             <objects>
                 <viewController storyboardIdentifier="ComponentA" id="0ML-5J-s0j" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6SY-AP-ckw">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Container A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekR-VB-pbe">
@@ -68,8 +68,8 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.65098039220000004" green="0.8980392157" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="3Al-SX-SkN"/>
                     </view>
-                    <size key="freeformSize" width="400" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSG-nX-c9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +80,7 @@
             <objects>
                 <viewController storyboardIdentifier="ComponentB" id="Nmw-zf-5kV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TTF-iu-cvA">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnK-TI-qH0">
@@ -98,7 +98,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BJ6-fR-JsW"/>
                     </view>
-                    <size key="freeformSize" width="400" height="600"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-gO-FJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
