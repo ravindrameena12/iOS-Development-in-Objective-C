@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ContainerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-II-usc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="490"/>
+                            </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rcO-05-zlF">
+                                <rect key="frame" x="127" y="543" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="asd:" destination="BYZ-38-t0r" eventType="valueChanged" id="VYm-qr-6Tm"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lFg-II-usc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="36l-Lv-FpL"/>
+                            <constraint firstItem="lFg-II-usc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="D2s-TU-0rb"/>
+                            <constraint firstItem="lFg-II-usc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FAM-0L-5pM"/>
+                            <constraint firstItem="rcO-05-zlF" firstAttribute="top" secondItem="lFg-II-usc" secondAttribute="bottom" constant="33" id="IRg-vr-RCs"/>
+                            <constraint firstItem="rcO-05-zlF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rzv-nC-yS3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rcO-05-zlF" secondAttribute="bottom" constant="96" id="koX-YS-JDc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="lFg-II-usc" id="Js4-Jw-IBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="-22.03898050974513"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bhv-KZ-9aL">
+            <objects>
+                <viewController storyboardIdentifier="ComponentA" id="0ML-5J-s0j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6SY-AP-ckw">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Container A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekR-VB-pbe">
+                                <rect key="frame" x="142" y="323" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.65098039220000004" green="0.8980392157" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <size key="freeformSize" width="400" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZSG-nX-c9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="-297"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="swj-tT-Umx">
+            <objects>
+                <viewController storyboardIdentifier="ComponentB" id="Nmw-zf-5kV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TTF-iu-cvA">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnK-TI-qH0">
+                                <rect key="frame" x="142" y="323" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30196078430000001" green="0.66274509800000003" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="SnK-TI-qH0" firstAttribute="top" secondItem="BJ6-fR-JsW" secondAttribute="top" constant="303" id="5Ve-kI-EBZ"/>
+                            <constraint firstItem="BJ6-fR-JsW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SnK-TI-qH0" secondAttribute="trailing" symbolic="YES" id="9o2-w1-rms"/>
+                            <constraint firstItem="SnK-TI-qH0" firstAttribute="leading" secondItem="BJ6-fR-JsW" secondAttribute="leading" constant="142" id="Prf-dU-gWS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BJ6-fR-JsW"/>
+                    </view>
+                    <size key="freeformSize" width="400" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJp-gO-FJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="428"/>
+        </scene>
+    </scenes>
+</document>
