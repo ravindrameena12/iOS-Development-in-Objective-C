@@ -14,8 +14,12 @@ class TableViewController: UITableViewController {
     var queryResult: QueryService?
     var vechicleData: [apimodel]?
     
+    private let headerIdentifier = "headerCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableView.automaticDimension
         queryResult = QueryService()
         self.queryResult?.getSearchResults(completionHandler: { (dtr) in
         self.vechicleData = dtr
@@ -23,22 +27,53 @@ class TableViewController: UITableViewController {
         })
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return vechicleData == nil ? 0 : vechicleData!.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return vechicleData![section].Models.count
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return vechicleData![section].Make
+        return vechicleData![section].collasped ? (1+vechicleData![section].Models.count) : 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = vechicleData![indexPath.section].Models[indexPath.row]
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: headerIdentifier, for: indexPath) as! SectionHeaderTableViewCell
+            cell.titleLabel.text = vechicleData![indexPath.section].Make
+            
+            if vechicleData![indexPath.section].collasped {
+                cell.setExpanded()
+            } else {
+                cell.setCollapsed()
+            }
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = vechicleData![indexPath.section].Models[indexPath.row - 1]
+            return cell
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            expandcollaspe(section: indexPath.section)
+        }
+    }
+    
+    func expandcollaspe(section: Int) {
+            vechicleData![section].collasped = !vechicleData![section].collasped
+            if let vehcount = vechicleData?.count {
+                for i in 0..<vehcount {
+                    if i != section{
+                        vechicleData![i].collasped = false
+                    }
+                }
+            }
+            tableView.reloadData()
     }
     
 }

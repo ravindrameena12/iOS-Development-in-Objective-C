@@ -11,8 +11,10 @@ import Foundation
 struct apimodel {
     var Make: String
     var Models: [String]
+    var collasped: Bool
     init(Make: String, Models: [String]) {
         self.Make = Make
         self.Models = Models
+        self.collasped = false
     }
 }

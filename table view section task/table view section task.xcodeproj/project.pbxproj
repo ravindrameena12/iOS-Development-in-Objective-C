@@ -15,6 +15,7 @@
 		714BFDC323CC6164001BE2D7 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BFDC223CC6164001BE2D7 /* Services.swift */; };
 		714BFDC523CC674E001BE2D7 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BFDC423CC674E001BE2D7 /* TableViewController.swift */; };
 		714BFDC723CC8CED001BE2D7 /* apimodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BFDC623CC8CED001BE2D7 /* apimodel.swift */; };
+		71BD650B23CDD5DD0044E388 /* SectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BD650A23CDD5DD0044E388 /* SectionHeaderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		714BFDC223CC6164001BE2D7 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		714BFDC423CC674E001BE2D7 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		714BFDC623CC8CED001BE2D7 /* apimodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = apimodel.swift; sourceTree = "<group>"; };
+		71BD650A23CDD5DD0044E388 /* SectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				714BFDC223CC6164001BE2D7 /* Services.swift */,
 				714BFDC423CC674E001BE2D7 /* TableViewController.swift */,
 				714BFDC623CC8CED001BE2D7 /* apimodel.swift */,
+				71BD650A23CDD5DD0044E388 /* SectionHeaderTableViewCell.swift */,
 			);
 			path = "table view section task";
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BD650B23CDD5DD0044E388 /* SectionHeaderTableViewCell.swift in Sources */,
 				714BFDB323CC5C4E001BE2D7 /* ViewController.swift in Sources */,
 				714BFDC723CC8CED001BE2D7 /* apimodel.swift in Sources */,
 				714BFDC323CC6164001BE2D7 /* Services.swift in Sources */,
