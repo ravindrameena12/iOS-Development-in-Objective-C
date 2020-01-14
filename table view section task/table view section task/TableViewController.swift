@@ -12,7 +12,7 @@ class TableViewController: UITableViewController {
     
     @IBOutlet var tableview: UITableView!
     var queryResult: QueryService?
-    var vechicleData: [apimodel]?
+    var vechicleData: [vehiclemodel]?
     
     private let headerIdentifier = "headerCell"
     
@@ -37,6 +37,7 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vechicleData![section].collasped ? (1+vechicleData![section].Models.count) : 1
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

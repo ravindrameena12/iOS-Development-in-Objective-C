@@ -5,10 +5,10 @@ typealias JSONDictionary = [String: Any]
 class QueryService {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
-    var tracks: [apimodel] = []
+    var tracks: [vehiclemodel] = []
     var jsondata: String?
     
-    func getSearchResults(completionHandler:@escaping (_ tracks:[apimodel])->Void) {
+    func getSearchResults(completionHandler:@escaping (_ tracks:[vehiclemodel])->Void) {
         dataTask?.cancel()
         if var urlComponents = URLComponents(string: "https://qamapp.iaai.com/acserviceswebapi/api/getmakemodel") {
             guard let url = urlComponents.url else {
@@ -39,15 +39,14 @@ class QueryService {
     
     func parsejson(apidata: Data) {
         do {
-            let response = try JSONSerialization.jsonObject(with: apidata, options: []) as? [Any]
-            for item in response! {
-                var itemdata = item as! JSONDictionary
-                let apimodelobject = apimodel(Make: itemdata["Make"]! as! String, Models: itemdata["Models"] as! [String]).self
-                tracks.append(apimodelobject)
+            let myStructArray = try JSONDecoder().decode([apimodel].self, from: apidata)
+            print(myStructArray[0].Make)
+            for item in myStructArray {
+                let vehicleitem = vehiclemodel(Make: item.Make, Models: item.Models)
+                tracks.append(vehicleitem)
             }
-
         } catch {
-            print("eroorr")
+            print(error)
         }
     }
 }

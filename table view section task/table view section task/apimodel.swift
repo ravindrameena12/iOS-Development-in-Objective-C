@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct apimodel {
+struct vehiclemodel {
     var Make: String
     var Models: [String]
     var collasped: Bool
@@ -16,5 +16,14 @@ struct apimodel {
         self.Make = Make
         self.Models = Models
         self.collasped = false
+    }
+}
+
+struct apimodel: Decodable {
+    var Make: String
+    var Models: [String]
+    init(Make: String, Models: [String]) {
+        self.Make = Make
+        self.Models = Models
     }
 }
